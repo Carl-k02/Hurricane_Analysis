@@ -20,7 +20,28 @@ damages = ['Damages not recorded', '100M', 'Damages not recorded', '40M', '27.9M
 deaths = [90,4000,16,3103,179,184,408,682,5,1023,43,319,688,259,37,11,2068,269,318,107,65,19325,51,124,17,1836,125,87,45,133,603,138,3057,74]
 
 # write your update damages function here:
+conversion = {"M": 1000000,
+              "B": 1000000000}
+new_nums = []
+def updated_damages(list):
+    for i in damages:
+        if 'M' in i:
+            new_num_list = i.split('M')
+            new_nums.append(float(new_num_list[0]) * conversion['M'])
+        elif 'B' in i:
+            new_num_list = i.split('B')
+            new_nums.append(float(new_num_list[0]) * conversion['B'])
+        else:
+            new_nums.append(i)
 
+            
+            
+    return new_nums
+            
+            
+            
+print(updated_damages(damages))
+            
 
 
 
