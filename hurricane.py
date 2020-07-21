@@ -50,14 +50,18 @@ for index_years, i_years in enumerate(years):
     year_dict.update({i_years:{'Name':names[index_years], 'Month':months[index_years], 'Year': years[index_years], 'Max sustained wind': max_sustained_winds[index_years], 'Areas affected': areas_affected[index_years], 'Damage': updated_damages(damages)[index_years], 'Deaths':deaths[index_years]}}) 
 print(year_dict[1932])
 
-
-
-
-
-
 # write your count affected areas function here:
+affected_count = {}
+for i in areas_affected:
+    for j in i:
+        if j not in affected_count:
+            affected_count[j] = 1 
+        elif j in affected_count:
+            affected_count[j] += 1
+print(affected_count)
+        
 
-
+    
 
 
 
