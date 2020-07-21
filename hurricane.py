@@ -32,24 +32,20 @@ def updated_damages(list):
             new_num_list = i.split('B')
             new_nums.append(float(new_num_list[0]) * conversion['B'])
         else:
-            new_nums.append(i)
-
-            
-            
+            new_nums.append(i)        
     return new_nums
             
-            
-            
-print(updated_damages(damages))
-            
-
-
-
-
-
-
+#print(updated_damages(damages))
+        
 # write your construct hurricane dictionary function here:
+new_dict = {}
+for index_names, i_names in enumerate(names):
+    new_dict.update({i_names:{'Name':names[index_names], 'Month':months[index_names], 'Year': years[index_names], 'Max sustained wind': max_sustained_winds[index_names], 'Areas affected': areas_affected[index_names], 'Damage': updated_damages(damages)[index_names], 'Deaths':deaths[index_names]}}) 
 
+print(new_dict)
+
+    
+    
 
 
 
