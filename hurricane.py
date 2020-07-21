@@ -38,22 +38,17 @@ def updated_damages(list):
 #print(updated_damages(damages))
         
 # write your construct hurricane dictionary function here:
-new_dict = {}
+name_dict = {}
 for index_names, i_names in enumerate(names):
-    new_dict.update({i_names:{'Name':names[index_names], 'Month':months[index_names], 'Year': years[index_names], 'Max sustained wind': max_sustained_winds[index_names], 'Areas affected': areas_affected[index_names], 'Damage': updated_damages(damages)[index_names], 'Deaths':deaths[index_names]}}) 
+    name_dict.update({i_names:{'Name':names[index_names], 'Month':months[index_names], 'Year': years[index_names], 'Max sustained wind': max_sustained_winds[index_names], 'Areas affected': areas_affected[index_names], 'Damage': updated_damages(damages)[index_names], 'Deaths':deaths[index_names]}}) 
 
-print(new_dict)
-
-    
-    
-
-
-
-
-
+print(name_dict)
 
 # write your construct hurricane by year dictionary function here:
-
+year_dict = {}
+for index_years, i_years in enumerate(years):
+    year_dict.update({i_years:{'Name':names[index_years], 'Month':months[index_years], 'Year': years[index_years], 'Max sustained wind': max_sustained_winds[index_years], 'Areas affected': areas_affected[index_years], 'Damage': updated_damages(damages)[index_years], 'Deaths':deaths[index_years]}}) 
+print(year_dict[1932])
 
 
 
